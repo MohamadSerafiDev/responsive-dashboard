@@ -1,7 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:resposive_learn/views/layouts/Tablet_layout.dart';
+import 'package:resposive_learn/views/layouts/adaptive_layout.dart';
 import 'package:resposive_learn/views/layouts/desktop_layout.dart';
 import 'package:resposive_learn/views/layouts/mobile_layout.dart';
 import 'package:resposive_learn/views/widgets/custom_drawer.dart';
@@ -35,16 +34,10 @@ class _FirstScreenHomeState extends State<FirstScreenHome> {
               : null,
       backgroundColor: Color(0xffdbdbdb),
 
-      body: LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-          if (constraints.maxWidth < 600) {
-            return MobileLayout();
-          } else if (constraints.maxWidth < 900) {
-            return TabletLayout();
-          } else {
-            return DesktopLayout();
-          }
-        },
+      body: AdaptiveLayout(
+        mobileLayout: (context) => MobileLayout(),
+        tabletLayout: (context) => TabletLayout(),
+        desktopLayout: (context) => DesktopLayout(),
       ),
     );
   }
