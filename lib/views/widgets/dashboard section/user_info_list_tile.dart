@@ -13,16 +13,13 @@ class UserInfoListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 64),
-      child: Card(
-        elevation: 0,
-        color: Color(0xfffafafa),
-        child: ListTile(
-          leading: leading,
-          title: Text(title, style: AppStyles.styleSemiBold16(context)),
-          subtitle: Text(subtitle, style: AppStyles.styleRegular12(context)),
-        ),
+    return Card(
+      elevation: 0,
+      color: Color(0xfffafafa),
+      child: ListTile(
+        leading: leading,
+        title: Text(title, style: AppStyles.styleSemiBold16(context)),
+        subtitle: Text(subtitle, style: AppStyles.styleRegular12(context)),
       ),
     );
   }
