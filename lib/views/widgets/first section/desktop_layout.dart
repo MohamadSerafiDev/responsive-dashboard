@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:resposive_learn/views/layouts/Tablet_layout.dart';
-import 'package:resposive_learn/views/widgets/custom_drawer.dart';
-import 'package:resposive_learn/views/widgets/desktop_end_listview.dart';
+import 'package:resposive_learn/views/widgets/first%20section/Tablet_layout.dart';
+import 'package:resposive_learn/views/widgets/first%20section/custom_drawer.dart';
+import 'package:resposive_learn/views/widgets/first%20section/desktop_end_listview.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});

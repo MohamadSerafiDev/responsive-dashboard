@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:resposive_learn/views/layouts/Tablet_layout.dart';
+import 'package:resposive_learn/views/widgets/dashboard%20section/desktop_dashboard_layout.dart';
+import 'package:resposive_learn/views/widgets/dashboard%20section/mobile_dashboard_layout.dart';
+import 'package:resposive_learn/views/widgets/dashboard%20section/tablet_dashboard_layout.dart';
 import 'package:resposive_learn/views/layouts/adaptive_layout.dart';
-import 'package:resposive_learn/views/layouts/desktop_layout.dart';
-import 'package:resposive_learn/views/layouts/mobile_layout.dart';
-import 'package:resposive_learn/views/widgets/custom_drawer.dart';
 
 class FirstScreenHome extends StatefulWidget {
   const FirstScreenHome({super.key});
@@ -13,31 +12,14 @@ class FirstScreenHome extends StatefulWidget {
 }
 
 class _FirstScreenHomeState extends State<FirstScreenHome> {
-  GlobalKey<ScaffoldState> scafoldkey = GlobalKey();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scafoldkey,
-      drawer: CustomDrawer(),
-      appBar:
-          MediaQuery.of(context).size.width < 900
-              ? AppBar(
-                backgroundColor: Colors.black,
-                leading: GestureDetector(
-                  onTap: () {
-                    scafoldkey.currentState!.openDrawer();
-                  },
-                  child: Icon(Icons.menu, color: Colors.white),
-                ),
-              )
-              : null,
-      backgroundColor: Color(0xffdbdbdb),
-
+      backgroundColor: Color(0xffF7F9FA),
       body: AdaptiveLayout(
-        mobileLayout: (context) => MobileLayout(),
-        tabletLayout: (context) => TabletLayout(),
-        desktopLayout: (context) => DesktopLayout(),
+        mobileLayout: (context) => MobileDashboardLayout(),
+        tabletLayout: (context) => TabletDashboardLayout(),
+        desktopLayout: (context) => DesktopDashboardLayout(),
       ),
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:resposive_learn/views/widgets/gridview_container.dart';
+import 'package:resposive_learn/views/widgets/first%20section/gridview_container.dart';
 
 class TabletListview extends StatelessWidget {
   const TabletListview({super.key});
