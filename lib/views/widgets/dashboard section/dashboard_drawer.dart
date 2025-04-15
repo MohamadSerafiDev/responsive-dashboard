@@ -31,7 +31,7 @@ class DashboardDrawer extends StatelessWidget {
 
             child: Column(
               children: [
-                Expanded(flex: 3, child: SizedBox()),
+                Expanded(flex: 3, child: SizedBox(height: 20)),
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
                     title: 'Settings system',
