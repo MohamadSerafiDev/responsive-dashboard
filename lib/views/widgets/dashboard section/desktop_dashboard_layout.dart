@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/all_expenses.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/dashboard_drawer.dart';
+import 'package:resposive_learn/views/widgets/dashboard%20section/income_analysis.dart';
+import 'package:resposive_learn/views/widgets/dashboard%20section/my_card_and_transactions.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/quick_invoice.dart';
 
 class DesktopDashboardLayout extends StatelessWidget {
@@ -10,17 +12,36 @@ class DesktopDashboardLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(child: DashboardDrawer()),
+        Expanded(flex: 19, child: DashboardDrawer()),
         SizedBox(width: 32),
         Expanded(
-          child: Column(
-            children: [
-              Expanded(child: AllExpenses()),
-              SizedBox(height: 32),
-              Expanded(child: QuickInvoice()),
-            ],
+          flex: 42,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 40),
+            child: Column(
+              children: [
+                Expanded(child: AllExpenses()),
+                SizedBox(height: 24),
+                Expanded(child: QuickInvoice()),
+              ],
+            ),
           ),
         ),
+        SizedBox(width: 24),
+        Expanded(
+          flex: 33,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 40),
+            child: Column(
+              children: [
+                MyCardAndTransactions(),
+                SizedBox(height: 24),
+                Flexible(child: IncomeAnalysis()),
+              ],
+            ),
+          ),
+        ),
+        SizedBox(width: 32),
       ],
     );
   }

@@ -13,42 +13,48 @@ class DashboardDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: UserInfoListTile(
-              leading: SvgPicture.asset(Assets.imagesPerson),
-              title: 'Lekan Okeowo',
-              subtitle: 'demo@gmail.com',
-            ),
-          ),
-          SliverToBoxAdapter(child: SizedBox(height: 8)),
-          DrawerItemListView(),
-
-          SliverFillRemaining(
-            // hasScrollBody: false,
-            hasScrollBody: false,
-
-            child: Column(
-              children: [
-                Expanded(flex: 3, child: SizedBox(height: 20)),
-                InActiveDrawerItem(
-                  drawerItemModel: DrawerItemModel(
-                    title: 'Settings system',
-                    image: Assets.imagesSetting,
-                  ),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 28),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: UserInfoListTile(
+                  leading: SvgPicture.asset(Assets.imagesPerson),
+                  title: 'Lekan Okeowo',
+                  subtitle: 'demo@gmail.com',
                 ),
-                InActiveDrawerItem(
-                  drawerItemModel: DrawerItemModel(
-                    title: 'Logout account',
-                    image: Assets.imagesLogout,
-                  ),
-                ),
-                Expanded(child: SizedBox()),
-              ],
+              ),
             ),
-          ),
-        ],
+            SliverToBoxAdapter(child: SizedBox(height: 8)),
+            DrawerItemListView(),
+
+            SliverFillRemaining(
+              // hasScrollBody: false,
+              hasScrollBody: false,
+
+              child: Column(
+                children: [
+                  Expanded(flex: 3, child: SizedBox(height: 20)),
+                  InActiveDrawerItem(
+                    drawerItemModel: DrawerItemModel(
+                      title: 'Settings system',
+                      image: Assets.imagesSetting,
+                    ),
+                  ),
+                  InActiveDrawerItem(
+                    drawerItemModel: DrawerItemModel(
+                      title: 'Logout account',
+                      image: Assets.imagesLogout,
+                    ),
+                  ),
+                  Expanded(child: SizedBox()),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

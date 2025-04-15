@@ -4,13 +4,8 @@ import 'package:resposive_learn/utils/app_styles.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/all_expenses_item_header.dart';
 
 class InActiveAllExpensesItem extends StatelessWidget {
-  const InActiveAllExpensesItem({
-    super.key,
-    required this.itemModel,
-    required this.isActive,
-  });
+  const InActiveAllExpensesItem({super.key, required this.itemModel});
   final AllExpensesItemModel itemModel;
-  final bool isActive;
 
   @override
   Widget build(BuildContext context) {
