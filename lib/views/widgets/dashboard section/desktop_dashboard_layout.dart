@@ -19,11 +19,7 @@ class DesktopDashboardLayout extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(top: 40),
             child: Column(
-              children: [
-                Expanded(child: AllExpenses()),
-                SizedBox(height: 24),
-                Expanded(child: QuickInvoice()),
-              ],
+              children: [AllExpenses(), SizedBox(height: 24), QuickInvoice()],
             ),
           ),
         ),

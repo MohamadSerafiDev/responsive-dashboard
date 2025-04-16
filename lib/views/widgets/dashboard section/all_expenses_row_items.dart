@@ -35,7 +35,7 @@ class _AllExpensesRowItemsState extends State<AllExpensesRowItems> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Row(
         children: [
           ...List.generate(AllExpensesRowItems.items.length, (index) {
