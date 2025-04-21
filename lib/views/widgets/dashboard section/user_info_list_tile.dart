@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:resposive_learn/models/user_info_model.dart';
 import 'package:resposive_learn/utils/app_styles.dart';
 
 class UserInfoListTile extends StatelessWidget {
-  const UserInfoListTile({
-    super.key,
-    required this.leading,
-    required this.title,
-    required this.subtitle,
-  });
-  final Widget leading;
-  final String title, subtitle;
+  const UserInfoListTile({super.key, required this.userInfoModel});
+  final UserInfoModel userInfoModel;
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +13,15 @@ class UserInfoListTile extends StatelessWidget {
       elevation: 0,
       color: Color(0xfffafafa),
       child: ListTile(
-        leading: leading,
-        title: Text(title, style: AppStyles.styleSemiBold16(context)),
-        subtitle: Text(subtitle, style: AppStyles.styleRegular12(context)),
+        leading: SvgPicture.asset(userInfoModel.image),
+        title: Text(
+          userInfoModel.name,
+          style: AppStyles.styleSemiBold16(context),
+        ),
+        subtitle: Text(
+          userInfoModel.email,
+          style: AppStyles.styleRegular12(context),
+        ),
       ),
     );
   }
