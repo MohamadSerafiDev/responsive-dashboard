@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/all_expenses.dart';
+import 'package:resposive_learn/views/widgets/dashboard%20section/all_expenses_and_quick_invoice_section.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/dashboard_drawer.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/income_analysis.dart';
-import 'package:resposive_learn/views/widgets/dashboard%20section/my_card_and_transactions.dart';
+import 'package:resposive_learn/views/widgets/dashboard%20section/my_cards.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/quick_invoice.dart';
 
 class DesktopDashboardLayout extends StatelessWidget {
@@ -14,15 +15,7 @@ class DesktopDashboardLayout extends StatelessWidget {
       children: [
         Expanded(flex: 19, child: DashboardDrawer()),
         SizedBox(width: 32),
-        Expanded(
-          flex: 42,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 40),
-            child: Column(
-              children: [AllExpenses(), SizedBox(height: 24), QuickInvoice()],
-            ),
-          ),
-        ),
+        Expanded(flex: 42, child: AllExpensesAndQuickInvoiceSection()),
         SizedBox(width: 24),
         Expanded(
           flex: 33,
@@ -30,7 +23,7 @@ class DesktopDashboardLayout extends StatelessWidget {
             padding: const EdgeInsets.only(top: 40),
             child: Column(
               children: [
-                MyCardAndTransactions(),
+                MyCards(),
                 SizedBox(height: 24),
                 Flexible(child: IncomeAnalysis()),
               ],
