@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:resposive_learn/views/widgets/dashboard%20section/all_expenses.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/all_expenses_and_quick_invoice_section.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/dashboard_drawer.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/income_analysis.dart';
-import 'package:resposive_learn/views/widgets/dashboard%20section/my_cards.dart';
-import 'package:resposive_learn/views/widgets/dashboard%20section/quick_invoice.dart';
+import 'package:resposive_learn/views/widgets/dashboard%20section/my_cards_and_transactions_history.dart';
 
 class DesktopDashboardLayout extends StatelessWidget {
   const DesktopDashboardLayout({super.key});
@@ -23,7 +21,8 @@ class DesktopDashboardLayout extends StatelessWidget {
             padding: const EdgeInsets.only(top: 40),
             child: Column(
               children: [
-                MyCards(),
+                MyCardsAndTransactionsHistory(),
+
                 SizedBox(height: 24),
                 Flexible(child: IncomeAnalysis()),
               ],
