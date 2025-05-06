@@ -34,37 +34,34 @@ class _AllExpensesRowItemsState extends State<AllExpensesRowItems> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-      child: Row(
-        children: [
-          ...List.generate(AllExpensesRowItems.items.length, (index) {
-            return Expanded(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-                child: GestureDetector(
-                  onTap: () {
-                    if (selectedIndex != index) {
-                      setState(() {
-                        print('refreshed');
-                        selectedIndex = index;
-                      });
-                    }
-                  },
-                  child:
-                      selectedIndex == index
-                          ? ActiveAllExpensesItem(
-                            itemModel: AllExpensesRowItems.items[index],
-                          )
-                          : InActiveAllExpensesItem(
-                            itemModel: AllExpensesRowItems.items[index],
-                          ),
-                ),
+    return Row(
+      children: [
+        ...List.generate(AllExpensesRowItems.items.length, (index) {
+          return Expanded(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+              child: GestureDetector(
+                onTap: () {
+                  if (selectedIndex != index) {
+                    setState(() {
+                      print('refreshed');
+                      selectedIndex = index;
+                    });
+                  }
+                },
+                child:
+                    selectedIndex == index
+                        ? ActiveAllExpensesItem(
+                          itemModel: AllExpensesRowItems.items[index],
+                        )
+                        : InActiveAllExpensesItem(
+                          itemModel: AllExpensesRowItems.items[index],
+                        ),
               ),
-            );
-          }),
-        ],
-      ),
+            ),
+          );
+        }),
+      ],
     );
   }
 }

@@ -20,7 +20,7 @@ class DashboardDrawer extends StatelessWidget {
           slivers: [
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.only(top: 16),
+                padding: const EdgeInsets.only(top: 16, right: 12),
                 child: UserInfoListTile(
                   userInfoModel: UserInfoModel(
                     name: 'Lekan Okeowo',

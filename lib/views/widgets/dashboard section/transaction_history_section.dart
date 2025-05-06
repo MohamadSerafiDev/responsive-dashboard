@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:resposive_learn/models/transaction_history_item_model.dart';
 import 'package:resposive_learn/utils/app_styles.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/transaction_history_header.dart';
-import 'package:resposive_learn/views/widgets/dashboard%20section/transaction_history_item.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/transaction_items_listview.dart';
 
 class TransactionHistorySection extends StatelessWidget {

@@ -29,7 +29,7 @@ class TransactionItemsListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 3,
+      itemCount: items.length,
       shrinkWrap: true,
       itemBuilder: (context, index) {
         return TransactionHistoryItem(item: items[index]);

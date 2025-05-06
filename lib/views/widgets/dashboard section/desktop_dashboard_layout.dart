@@ -1,7 +1,9 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/all_expenses_and_quick_invoice_section.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/dashboard_drawer.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/income_analysis.dart';
+import 'package:resposive_learn/views/widgets/dashboard%20section/income_chart.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/my_cards_and_transactions_history.dart';
 
 class DesktopDashboardLayout extends StatelessWidget {
@@ -22,9 +24,8 @@ class DesktopDashboardLayout extends StatelessWidget {
             child: Column(
               children: [
                 MyCardsAndTransactionsHistory(),
-
                 SizedBox(height: 24),
-                Flexible(child: IncomeAnalysis()),
+                Expanded(child: IncomeAnalysis()),
               ],
             ),
           ),
