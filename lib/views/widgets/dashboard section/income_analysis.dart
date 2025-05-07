@@ -15,14 +15,12 @@ class IncomeAnalysis extends StatelessWidget {
         children: [
           IncomeHeader(),
           Gap(20),
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(child: IncomeChart()),
-                Gap(40),
-                Expanded(child: IncomeDetailsList()),
-              ],
-            ),
+          Row(
+            children: [
+              Expanded(child: IncomeChart()),
+              Gap(40),
+              Expanded(child: IncomeDetailsList()),
+            ],
           ),
         ],
       ),

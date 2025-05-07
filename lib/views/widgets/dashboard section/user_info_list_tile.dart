@@ -16,10 +16,12 @@ class UserInfoListTile extends StatelessWidget {
         leading: SvgPicture.asset(userInfoModel.image),
         title: Text(
           userInfoModel.name,
+          overflow: TextOverflow.ellipsis,
           style: AppStyles.styleSemiBold16(context),
         ),
         subtitle: Text(
           userInfoModel.email,
+          overflow: TextOverflow.ellipsis,
           style: AppStyles.styleRegular12(context),
         ),
       ),
