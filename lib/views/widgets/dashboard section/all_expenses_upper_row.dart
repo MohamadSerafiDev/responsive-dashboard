@@ -16,15 +16,27 @@ class AllExpensesUpperRow extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           child: DropdownButtonHideUnderline(
-            child: DropdownButton(
+            child: DropdownButton<String>(
+              value: 'Monthly', // Add this
+              style: AppStyles.styleRegular16(context),
               borderRadius: BorderRadius.circular(12),
               padding: EdgeInsets.symmetric(horizontal: 12),
               items: [
                 DropdownMenuItem(
-                  child: Text(
-                    'Monthly',
-                    style: AppStyles.styleRegular16(context),
-                  ),
+                  value: 'Daily', // Add this
+                  child: Text('Daily'),
+                ),
+                DropdownMenuItem(
+                  value: 'Weekly', // Add this
+                  child: Text('Weekly'),
+                ),
+                DropdownMenuItem(
+                  value: 'Monthly', // Add this
+                  child: Text('Monthly'),
+                ),
+                DropdownMenuItem(
+                  value: 'Yearly', // Add this
+                  child: Text('Yearly'),
                 ),
               ],
               onChanged: (value) {},

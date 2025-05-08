@@ -4,7 +4,6 @@ import 'package:resposive_learn/models/income_chart_detail_model.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/custom_background_container.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/income_chart.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/income_details_item.dart';
-import 'package:resposive_learn/views/widgets/dashboard%20section/income_details_list.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/income_header.dart';
 
 class IncomeAnalysis extends StatelessWidget {

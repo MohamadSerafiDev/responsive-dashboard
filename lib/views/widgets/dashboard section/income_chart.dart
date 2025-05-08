@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:resposive_learn/utils/app_styles.dart';
 
 class IncomeChart extends StatefulWidget {
   const IncomeChart({super.key});
@@ -30,31 +31,28 @@ class _IncomeChartState extends State<IncomeChart> {
         },
       ),
       sections: [
-        PieChartSectionData(
-          value: 40,
-          color: Color(0xff208cc8),
-          showTitle: false,
-          radius: activeSection == 0 ? 45 : 30,
-        ),
-        PieChartSectionData(
-          value: 25,
-          color: Color(0xff4eb7f2),
-          showTitle: false,
-          radius: activeSection == 1 ? 45 : 30,
-        ),
-        PieChartSectionData(
-          value: 20,
-          color: Color(0xff064061),
-          showTitle: false,
-          radius: activeSection == 2 ? 45 : 30,
-        ),
-        PieChartSectionData(
-          value: 22,
-          color: Color(0xffe2decd),
-          showTitle: false,
-          radius: activeSection == 3 ? 45 : 30,
-        ),
+        pieChartSectionDataItem(Color(0xff208cc8), 40, 0, 'Design service'),
+        pieChartSectionDataItem(Color(0xff4eb7f2), 25, 1, 'Design Product'),
+        pieChartSectionDataItem(Color(0xff064061), 20, 2, 'Product Royalty'),
+        pieChartSectionDataItem(Color(0xffe2decd), 22, 3, 'Other'),
       ],
+    );
+  }
+
+  PieChartSectionData pieChartSectionDataItem(
+    Color color,
+    double value,
+    int index,
+    String title,
+  ) {
+    return PieChartSectionData(
+      value: value,
+      title: title,
+      titleStyle: AppStyles.styleRegular16(context),
+      titlePositionPercentageOffset: -1.2,
+      color: color,
+      showTitle: activeSection == index,
+      radius: activeSection == index ? 55 : 40,
     );
   }
 }
