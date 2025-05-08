@@ -11,30 +11,48 @@ class DesktopDashboardLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(flex: 19, child: DashboardDrawer()),
+        Expanded(flex: 2, child: DashboardDrawer()),
         SizedBox(width: 32),
         Expanded(
-          flex: 42,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 40),
-            child: AllExpensesAndQuickInvoiceSection(),
+          flex: 7,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 40),
+                        child: AllExpensesAndQuickInvoiceSection(),
+                      ),
+                    ),
+                    SizedBox(width: 24),
+                    Expanded(
+                      flex: 2,
+                      child: SingleChildScrollView(
+                        physics: NeverScrollableScrollPhysics(),
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 40),
+                          child: Column(
+                            children: [
+                              MyCardsAndTransactionsHistory(),
+                              SizedBox(height: 24),
+                              IncomeAnalysis(),
+                              SizedBox(height: 24),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 32),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
-        SizedBox(width: 24),
-        Expanded(
-          flex: 33,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 40),
-            child: Column(
-              children: [
-                MyCardsAndTransactionsHistory(),
-                SizedBox(height: 24),
-                Expanded(child: IncomeAnalysis()),
-              ],
-            ),
-          ),
-        ),
-        SizedBox(width: 32),
       ],
     );
   }
