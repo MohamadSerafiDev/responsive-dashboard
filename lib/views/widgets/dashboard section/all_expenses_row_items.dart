@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:resposive_learn/models/all_expenses_item_model.dart';
 import 'package:resposive_learn/utils/app_images.dart';
 import 'package:resposive_learn/views/widgets/dashboard%20section/active_and_inactive_all_expenses_item.dart';
@@ -36,31 +37,68 @@ class _AllExpensesRowItemsState extends State<AllExpensesRowItems> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        ...List.generate(AllExpensesRowItems.items.length, (index) {
-          return Expanded(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-              child: GestureDetector(
-                onTap: () {
-                  if (selectedIndex != index) {
-                    setState(() {
-                      print('refreshed');
-                      selectedIndex = index;
-                    });
-                  }
-                },
-                child:
-                    selectedIndex == index
-                        ? ActiveAllExpensesItem(
-                          itemModel: AllExpensesRowItems.items[index],
-                        )
-                        : InActiveAllExpensesItem(
-                          itemModel: AllExpensesRowItems.items[index],
-                        ),
-              ),
-            ),
-          );
-        }),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              if (selectedIndex != 0) {
+                setState(() {
+                  print('refreshed');
+                  selectedIndex = 0;
+                });
+              }
+            },
+            child:
+                selectedIndex == 0
+                    ? ActiveAllExpensesItem(
+                      itemModel: AllExpensesRowItems.items[0],
+                    )
+                    : InActiveAllExpensesItem(
+                      itemModel: AllExpensesRowItems.items[0],
+                    ),
+          ),
+        ),
+        Gap(12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              if (selectedIndex != 1) {
+                setState(() {
+                  print('refreshed');
+                  selectedIndex = 1;
+                });
+              }
+            },
+            child:
+                selectedIndex == 1
+                    ? ActiveAllExpensesItem(
+                      itemModel: AllExpensesRowItems.items[1],
+                    )
+                    : InActiveAllExpensesItem(
+                      itemModel: AllExpensesRowItems.items[1],
+                    ),
+          ),
+        ),
+        Gap(12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              if (selectedIndex != 2) {
+                setState(() {
+                  print('refreshed');
+                  selectedIndex = 2;
+                });
+              }
+            },
+            child:
+                selectedIndex == 2
+                    ? ActiveAllExpensesItem(
+                      itemModel: AllExpensesRowItems.items[2],
+                    )
+                    : InActiveAllExpensesItem(
+                      itemModel: AllExpensesRowItems.items[2],
+                    ),
+          ),
+        ),
       ],
     );
   }

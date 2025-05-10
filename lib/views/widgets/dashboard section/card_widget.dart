@@ -68,7 +68,7 @@ class CardWidget extends StatelessWidget {
                 ).copyWith(color: Colors.white),
               ),
             ),
-            Gap(30),
+            Flexible(child: Gap(30)),
           ],
         ),
       ),

@@ -1,8 +1,9 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:resposive_learn/views/first_screen_home.dart';
 
 void main() async {
-  runApp(const MainApp());
+  runApp(DevicePreview(enabled: false, builder: (contex) => MainApp()));
 }
 
 class MainApp extends StatelessWidget {
@@ -12,6 +13,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       home: FirstScreenHome(),
     );
   }
