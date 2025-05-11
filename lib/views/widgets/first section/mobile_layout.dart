@@ -7,8 +7,8 @@ class MobileLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [CustomSliverGridview(), CustomSliverListview()],
+    return const CustomScrollView(
+      slivers: [CustomSliverGridview(), const CustomSliverListview()],
     );
   }
 }

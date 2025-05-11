@@ -11,7 +11,7 @@ class UserInfoListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
-      color: Color(0xfffafafa),
+      color: const Color(0xfffafafa),
       child: ListTile(
         leading: SvgPicture.asset(userInfoModel.image),
         title: Text(

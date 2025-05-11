@@ -18,18 +18,18 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           backgroundColor: color ?? Colors.white,
-          padding: EdgeInsets.symmetric(vertical: 20),
+          padding: const EdgeInsets.symmetric(vertical: 20),
         ),
         child: Text(
           text,
           style:
-              color == Color(0xff4EB7F2)
+              color == const Color(0xff4EB7F2)
                   ? AppStyles.styleMedium20(
                     context,
                   ).copyWith(color: Colors.white)
                   : AppStyles.styleMedium20(
                     context,
-                  ).copyWith(color: Color(0xff4EB7F2)),
+                  ).copyWith(color: const Color(0xff4EB7F2)),
         ),
       ),
     );

@@ -6,7 +6,7 @@ class ButtonsLowerRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         Expanded(child: CustomButton(text: 'Add more details')),
         SizedBox(width: 24),

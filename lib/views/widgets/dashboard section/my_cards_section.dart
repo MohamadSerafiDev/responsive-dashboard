@@ -22,9 +22,9 @@ class MyCardsSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('My Cards', style: AppStyles.styleSemiBold20(context)),
-        Gap(20),
+        const Gap(20),
         CustomCardPageView(pageController: pageController, cardNum: cardNum),
-        Gap(20),
+        const Gap(20),
         CustomDotIndecator(currentPage: currentPage, cards: cardNum),
       ],
     );

@@ -9,9 +9,9 @@ class AllExpenses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomBackgroundContainer(
+    return const CustomBackgroundContainer(
       child: Column(
-        children: [AllExpensesUpperRow(), Gap(16), AllExpensesRowItems()],
+        children: [const AllExpensesUpperRow(), Gap(16), AllExpensesRowItems()],
       ),
     );
   }

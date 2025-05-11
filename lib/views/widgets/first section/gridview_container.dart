@@ -7,7 +7,7 @@ class TopContainter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xffb4b4b4),
+        color: const Color(0xffb4b4b4),
         borderRadius: BorderRadius.circular(10),
       ),
     );

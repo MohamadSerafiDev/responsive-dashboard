@@ -9,7 +9,7 @@ class DesktopDashboardLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         Expanded(flex: 2, child: DashboardDrawer()),
         SizedBox(width: 32),
@@ -24,7 +24,7 @@ class DesktopDashboardLayout extends StatelessWidget {
                     Expanded(
                       flex: 3,
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 40),
+                        padding: EdgeInsets.only(top: 40),
                         child: AllExpensesAndQuickInvoiceSection(),
                       ),
                     ),
@@ -34,7 +34,7 @@ class DesktopDashboardLayout extends StatelessWidget {
                       child: SingleChildScrollView(
                         physics: NeverScrollableScrollPhysics(),
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 40),
+                          padding: EdgeInsets.only(top: 40),
                           child: Column(
                             children: [
                               MyCardsAndTransactionsHistory(),

@@ -12,15 +12,15 @@ class CustomTextField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(' $title', style: AppStyles.styleMedium16(context)),
-        SizedBox(height: 12),
+        const SizedBox(height: 12),
         TextField(
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.all(20),
+            contentPadding: const EdgeInsets.all(20),
             hintText: hint,
             hintStyle: AppStyles.styleRegular16(
               context,
-            ).copyWith(color: Color(0xffAAAAAA)),
-            fillColor: Color(0xffFAFAFA),
+            ).copyWith(color: const Color(0xffAAAAAA)),
+            fillColor: const Color(0xffFAFAFA),
             filled: true,
 
             border: OutlineInputBorder(

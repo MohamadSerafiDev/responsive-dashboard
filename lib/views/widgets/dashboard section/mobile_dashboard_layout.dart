@@ -9,8 +9,8 @@ class MobileDashboardLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
+    return const SingleChildScrollView(
+      child: const Column(
         children: [
           AllExpensesAndQuickInvoiceSection(),
           Gap(24),

@@ -13,19 +13,22 @@ class IncomeDetailsItem extends StatelessWidget {
       leading: Container(
         width: 16,
         height: 16,
-        decoration: ShapeDecoration(shape: OvalBorder(), color: item.color),
+        decoration: ShapeDecoration(
+          shape: const OvalBorder(),
+          color: item.color,
+        ),
       ),
       title: Text(
         item.title,
         style: AppStyles.styleMedium20(
           context,
-        ).copyWith(color: Color(0xff064061)),
+        ).copyWith(color: const Color(0xff064061)),
       ),
       trailing: Text(
         item.percentage,
         style: AppStyles.styleMedium16(
           context,
-        ).copyWith(color: Color(0xff208CC8)),
+        ).copyWith(color: const Color(0xff208CC8)),
       ),
     );
   }

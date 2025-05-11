@@ -14,13 +14,13 @@ class InActiveAllExpensesItem extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Color(0xffF1F1F1), width: 1),
+        border: Border.all(color: const Color(0xffF1F1F1), width: 1),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AllExpensesItemHeader(image: itemModel.image),
-          SizedBox(height: 34),
+          const SizedBox(height: 34),
           FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(
@@ -28,7 +28,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
               style: AppStyles.styleSemiBold16(context),
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(
@@ -36,7 +36,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
               style: AppStyles.styleRegular14(context),
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(
@@ -59,14 +59,14 @@ class ActiveAllExpensesItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: BoxDecoration(
-        color: Color(0xff4EB7F2),
+        color: const Color(0xff4EB7F2),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AllExpensesItemHeader(color: Colors.white, image: itemModel.image),
-          SizedBox(height: 34),
+          const SizedBox(height: 34),
           FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(
@@ -76,17 +76,17 @@ class ActiveAllExpensesItem extends StatelessWidget {
               ).copyWith(color: Colors.white),
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(
               itemModel.date,
               style: AppStyles.styleRegular14(
                 context,
-              ).copyWith(color: Color(0xfffafafa)),
+              ).copyWith(color: const Color(0xfffafafa)),
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(

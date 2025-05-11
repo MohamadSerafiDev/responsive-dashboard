@@ -33,28 +33,28 @@ class _IncomeChartState extends State<IncomeChart> {
       ),
       sections: [
         pieChartSectionDataItem(
-          Color(0xff208cc8),
+          const Color(0xff208cc8),
           40,
           0,
           'Design service',
           widget.showTitle,
         ),
         pieChartSectionDataItem(
-          Color(0xff4eb7f2),
+          const Color(0xff4eb7f2),
           25,
           1,
           'Design Product',
           widget.showTitle,
         ),
         pieChartSectionDataItem(
-          Color(0xff064061),
+          const Color(0xff064061),
           20,
           2,
           'Product Royalty',
           widget.showTitle,
         ),
         pieChartSectionDataItem(
-          Color(0xffe2decd),
+          const Color(0xffe2decd),
           22,
           3,
           'Other',

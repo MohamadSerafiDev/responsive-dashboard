@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:resposive_learn/models/drawer_item_model.dart';
 import 'package:resposive_learn/models/user_info_model.dart';
 import 'package:resposive_learn/utils/app_images.dart';
@@ -30,8 +29,8 @@ class DashboardDrawer extends StatelessWidget {
                 ),
               ),
             ),
-            SliverToBoxAdapter(child: SizedBox(height: 8)),
-            DrawerItemListView(),
+            const SliverToBoxAdapter(child: const SizedBox(height: 8)),
+            const DrawerItemListView(),
 
             SliverFillRemaining(
               // hasScrollBody: false,
@@ -39,7 +38,7 @@ class DashboardDrawer extends StatelessWidget {
 
               child: Column(
                 children: [
-                  Expanded(flex: 3, child: SizedBox(height: 20)),
+                  const Expanded(flex: 3, child: SizedBox(height: 20)),
                   InActiveDrawerItem(
                     drawerItemModel: DrawerItemModel(
                       title: 'Settings system',
@@ -52,7 +51,7 @@ class DashboardDrawer extends StatelessWidget {
                       image: Assets.imagesLogout,
                     ),
                   ),
-                  Expanded(child: SizedBox()),
+                  const Expanded(child: SizedBox()),
                 ],
               ),
             ),

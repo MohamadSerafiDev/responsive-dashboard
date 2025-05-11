@@ -13,7 +13,7 @@ class CustomDrawerItem extends StatelessWidget {
         leading: Icon(icon),
         title: FittedBox(
           fit: BoxFit.scaleDown,
-          child: Text(text, style: TextStyle(letterSpacing: 3)),
+          child: Text(text, style: const TextStyle(letterSpacing: 3)),
         ),
       ),
     );

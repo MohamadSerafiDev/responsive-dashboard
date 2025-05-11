@@ -12,7 +12,7 @@ class IncomeHeader extends StatelessWidget {
         Text('Income', style: AppStyles.styleSemiBold20(context)),
         Container(
           decoration: BoxDecoration(
-            border: Border.all(color: Color(0xffF1F1F1), width: 1),
+            border: Border.all(color: const Color(0xffF1F1F1), width: 1),
             borderRadius: BorderRadius.circular(12),
           ),
           child: DropdownButtonHideUnderline(
@@ -20,8 +20,8 @@ class IncomeHeader extends StatelessWidget {
               value: 'Monthly', // Add this
               style: AppStyles.styleRegular16(context),
               borderRadius: BorderRadius.circular(12),
-              padding: EdgeInsets.symmetric(horizontal: 12),
-              items: [
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              items: const [
                 DropdownMenuItem(
                   value: 'Daily', // Add this
                   child: Text('Daily'),

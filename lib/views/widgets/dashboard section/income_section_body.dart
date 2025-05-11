@@ -9,22 +9,22 @@ class IncomeSectionBody extends StatelessWidget {
 
   static List<IncomeChartDetailModel> items = [
     IncomeChartDetailModel(
-      color: Color(0xff208cc8),
+      color: const Color(0xff208cc8),
       title: 'Design service',
       percentage: '40%',
     ),
     IncomeChartDetailModel(
-      color: Color(0xff4eb7f2),
+      color: const Color(0xff4eb7f2),
       title: 'Design product',
       percentage: '25%',
     ),
     IncomeChartDetailModel(
-      color: Color(0xff064061),
+      color: const Color(0xff064061),
       title: 'Product royalty',
       percentage: '20%',
     ),
     IncomeChartDetailModel(
-      color: Color(0xffe2decd),
+      color: const Color(0xffe2decd),
       title: 'Other',
       percentage: '22%',
     ),
@@ -34,11 +34,11 @@ class IncomeSectionBody extends StatelessWidget {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     return width < 1710 && width > 1300
-        ? Row(children: [Expanded(child: IncomeChart(showTitle: true))])
+        ? const Row(children: [Expanded(child: IncomeChart(showTitle: true))])
         : Row(
           children: [
-            Expanded(child: IncomeChart(showTitle: false)),
-            Gap(40),
+            const Expanded(child: const IncomeChart(showTitle: false)),
+            const Gap(40),
             Expanded(
               flex: 2,
               child: Column(

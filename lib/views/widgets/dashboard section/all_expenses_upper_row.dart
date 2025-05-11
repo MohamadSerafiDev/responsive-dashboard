@@ -12,7 +12,7 @@ class AllExpensesUpperRow extends StatelessWidget {
         Text('All Expenses', style: AppStyles.styleSemiBold20(context)),
         Container(
           decoration: BoxDecoration(
-            border: Border.all(color: Color(0xffF1F1F1), width: 1),
+            border: Border.all(color: const Color(0xffF1F1F1), width: 1),
             borderRadius: BorderRadius.circular(12),
           ),
           child: DropdownButtonHideUnderline(
@@ -20,21 +20,21 @@ class AllExpensesUpperRow extends StatelessWidget {
               value: 'Monthly', // Add this
               style: AppStyles.styleRegular16(context),
               borderRadius: BorderRadius.circular(12),
-              padding: EdgeInsets.symmetric(horizontal: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 12),
               items: [
-                DropdownMenuItem(
+                const DropdownMenuItem(
                   value: 'Daily', // Add this
                   child: Text('Daily'),
                 ),
-                DropdownMenuItem(
+                const DropdownMenuItem(
                   value: 'Weekly', // Add this
                   child: Text('Weekly'),
                 ),
-                DropdownMenuItem(
+                const DropdownMenuItem(
                   value: 'Monthly', // Add this
                   child: Text('Monthly'),
                 ),
-                DropdownMenuItem(
+                const DropdownMenuItem(
                   value: 'Yearly', // Add this
                   child: Text('Yearly'),
                 ),

@@ -11,18 +11,18 @@ class TransactionHistoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      color: Color(0xfffafafa),
+      color: const Color(0xfffafafa),
       elevation: 0,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: ListTile(
-          contentPadding: EdgeInsets.all(8),
+          contentPadding: const EdgeInsets.all(8),
           title: Text(item.title, style: AppStyles.styleSemiBold16(context)),
           subtitle: Text(
             item.date,
             style: AppStyles.styleRegular16(
               context,
-            ).copyWith(color: Color(0xffAAAAAA)),
+            ).copyWith(color: const Color(0xffAAAAAA)),
           ),
           trailing: Text(
             item.amount,

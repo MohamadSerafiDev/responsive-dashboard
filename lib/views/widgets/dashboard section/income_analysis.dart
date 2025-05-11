@@ -9,9 +9,9 @@ class IncomeAnalysis extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 48),
-      child: CustomBackgroundContainer(
+    return const Padding(
+      padding: EdgeInsets.only(bottom: 48),
+      child: const CustomBackgroundContainer(
         child: Column(children: [IncomeHeader(), Gap(20), IncomeSectionBody()]),
       ),
     );

@@ -14,7 +14,7 @@ class AllExpensesItemHeader extends StatelessWidget {
       children: [
         Flexible(
           child: ConstrainedBox(
-            constraints: BoxConstraints(maxWidth: 60),
+            constraints: const BoxConstraints(maxWidth: 60),
             child: AspectRatio(
               aspectRatio: 1,
               child: Container(
@@ -22,13 +22,16 @@ class AllExpensesItemHeader extends StatelessWidget {
                 height: 60,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: color == null ? Color(0xfffafafa) : Color(0xff5fbef3),
+                  color:
+                      color == null
+                          ? const Color(0xfffafafa)
+                          : const Color(0xff5fbef3),
                 ),
                 child: Center(
                   child: SvgPicture.asset(
                     image,
                     colorFilter: ColorFilter.mode(
-                      color ?? Color(0xff4EB7F2),
+                      color ?? const Color(0xff4EB7F2),
                       BlendMode.srcIn,
                     ),
                   ),
@@ -41,7 +44,7 @@ class AllExpensesItemHeader extends StatelessWidget {
           angle: pi,
           child: Icon(
             Icons.arrow_back_ios_new_rounded,
-            color: color ?? Color(0xff064061),
+            color: color ?? const Color(0xff064061),
           ),
         ),
       ],

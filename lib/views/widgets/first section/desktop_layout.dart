@@ -8,9 +8,9 @@ class DesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
-        Expanded(child: CustomDrawer()),
+        Expanded(child: const CustomDrawer()),
         Expanded(flex: 3, child: TabletLayout()),
         Expanded(child: DesktopEndListview()),
       ],

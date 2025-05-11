@@ -17,7 +17,7 @@ class CardWidget extends StatelessWidget {
             image: Image.asset(Assets.imagesCardWaves).image,
             fit: BoxFit.cover,
           ),
-          color: Color(0xff5bbcf3),
+          color: const Color(0xff5bbcf3),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
@@ -37,7 +37,7 @@ class CardWidget extends StatelessWidget {
                           context,
                         ).copyWith(color: Colors.white),
                       ),
-                      Gap(8),
+                      const Gap(8),
                       Text(
                         'Syah Bandi',
                         style: AppStyles.styleMedium20(context),
@@ -48,7 +48,7 @@ class CardWidget extends StatelessWidget {
                 ],
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Padding(
               padding: const EdgeInsets.only(right: 24),
               child: Text(
@@ -58,7 +58,7 @@ class CardWidget extends StatelessWidget {
                 ).copyWith(color: Colors.white),
               ),
             ),
-            Gap(12),
+            const Gap(12),
             Padding(
               padding: const EdgeInsets.only(right: 24),
               child: Text(
@@ -68,7 +68,7 @@ class CardWidget extends StatelessWidget {
                 ).copyWith(color: Colors.white),
               ),
             ),
-            Flexible(child: Gap(30)),
+            const Flexible(child: Gap(30)),
           ],
         ),
       ),

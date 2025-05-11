@@ -7,15 +7,15 @@ class CustomSliverGridview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverPadding(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       sliver: SliverGrid.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 16,
           mainAxisSpacing: 16,
         ),
         itemCount: 4,
-        itemBuilder: (context, index) => TopContainter(),
+        itemBuilder: (context, index) => const TopContainter(),
       ),
     );
   }

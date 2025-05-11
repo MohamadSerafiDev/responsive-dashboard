@@ -6,9 +6,9 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return const Drawer(
       backgroundColor: Color(0xffdbdbdb),
-      child: Column(
+      child: const Column(
         children: [
           DrawerHeader(child: Icon(Icons.favorite, size: 50)),
           CustomDrawerItem(icon: Icons.home, text: 'DASHBOARD'),

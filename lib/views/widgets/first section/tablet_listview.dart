@@ -14,7 +14,7 @@ class TabletListview extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemCount: 20,
           itemBuilder: (BuildContext context, int index) {
-            return Padding(
+            return const Padding(
               padding: EdgeInsets.only(right: 16),
               child: AspectRatio(aspectRatio: 1, child: TopContainter()),
             );

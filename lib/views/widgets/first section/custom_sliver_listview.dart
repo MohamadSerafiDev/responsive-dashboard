@@ -6,7 +6,7 @@ class CustomSliverListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverPadding(
-      padding: EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       sliver: SliverList.builder(
         itemBuilder:
             (context, index) => Padding(
@@ -14,7 +14,7 @@ class CustomSliverListview extends StatelessWidget {
               child: Container(
                 height: 70,
                 decoration: BoxDecoration(
-                  color: Color(0xffececec),
+                  color: const Color(0xffececec),
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),

@@ -12,15 +12,15 @@ class DesktopEndListview extends StatelessWidget {
           Container(
             height: 450,
             decoration: BoxDecoration(
-              color: Color(0xffb4b4b4),
+              color: const Color(0xffb4b4b4),
               borderRadius: BorderRadius.circular(10),
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Container(
             height: 600,
             decoration: BoxDecoration(
-              color: Color(0xffececec),
+              color: const Color(0xffececec),
               borderRadius: BorderRadius.circular(10),
             ),
           ),

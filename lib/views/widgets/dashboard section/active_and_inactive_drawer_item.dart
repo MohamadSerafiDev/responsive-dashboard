@@ -45,7 +45,7 @@ class ActiveDrawerItem extends StatelessWidget {
           style: AppStyles.styleBold16(context),
         ),
       ),
-      trailing: Container(width: 3.5, color: Color(0xff4EB7F2)),
+      trailing: Container(width: 3.5, color: const Color(0xff4EB7F2)),
     );
   }
 }

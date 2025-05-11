@@ -18,8 +18,8 @@ class CustomCardPageView extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       children: List.generate(
         cardNum,
-        (index) => Padding(
-          padding: const EdgeInsets.only(right: 20),
+        (index) => const Padding(
+          padding: EdgeInsets.only(right: 20),
           child: CardWidget(),
         ),
       ),

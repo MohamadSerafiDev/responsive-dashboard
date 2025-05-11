@@ -10,7 +10,7 @@ class TabletDashboardLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         Expanded(flex: 2, child: DashboardDrawer()),
         Gap(32),

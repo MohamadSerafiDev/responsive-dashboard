@@ -57,7 +57,7 @@ class _AllExpensesRowItemsState extends State<AllExpensesRowItems> {
                     ),
           ),
         ),
-        Gap(12),
+        const Gap(12),
         Expanded(
           child: GestureDetector(
             onTap: () {
@@ -78,7 +78,7 @@ class _AllExpensesRowItemsState extends State<AllExpensesRowItems> {
                     ),
           ),
         ),
-        Gap(12),
+        const Gap(12),
         Expanded(
           child: GestureDetector(
             onTap: () {
