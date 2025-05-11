@@ -79,12 +79,12 @@ class _IncomeChartState extends State<IncomeChart> {
       ).copyWith(color: Colors.black),
       titlePositionPercentageOffset:
           index == 0
-              ? -1.3
+              ? -1.4
               : index == 1
               ? -1.7
               : index == 2
-              ? -1.3
-              : -1.2,
+              ? -1.4
+              : -1.3,
       color: color,
       showTitle: showTitle ? activeSection == index : false,
       radius: activeSection == index ? 55 : 40,
