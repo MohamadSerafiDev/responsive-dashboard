@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:resposive_learn/views/first_screen_home.dart';
 
 void main() async {
-  runApp(DevicePreview(enabled: true, builder: (contex) => const MainApp()));
+  runApp(DevicePreview(enabled: false, builder: (contex) => const MainApp()));
 }
 
 class MainApp extends StatelessWidget {
